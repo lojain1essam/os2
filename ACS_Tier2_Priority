@@ -7,7 +7,7 @@ public class Tier2priority{
 
        for(int i=0;i<tier2.size();i++){
              ACSProcess p=tier2.get(i);
-             if(p.currentPriority<best.currentPriority)
+             if(p.currentPriority<highest.currentPriority)
                 highest=p;
 
 }
