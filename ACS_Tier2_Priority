@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Tier2Priority{
+public class Tier2priority{
     public static ACSProcess highestpriority(ArrayList<ACSProcess> tier2){
 
         ACSProcess highest=tier2.get(0);
