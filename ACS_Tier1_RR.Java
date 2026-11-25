@@ -37,7 +37,10 @@ public class ACS_Tier1_RR{
             addProcess(processes);
         }
 
-        if (p.remaining>0) tier2.add(p);
+        if (p.remaining > 0) {
+           ACSAging.enterTier2(p, time);
+           tier2.add(p);
+         }
         else p.completed= true;
         lastRun= p;
     }
@@ -57,4 +60,3 @@ public class ACS_Tier1_RR{
         }
     }
 }
-
