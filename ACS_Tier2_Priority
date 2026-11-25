@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class Tier2Priority{
+    public static ACSProcess highestpriority(ArrayList<ACSProcess> tier2){
+
+        ACSProcess highest=tier2.get(0);
+
+       for(int i=0;i<tier2.size();i++){
+             ACSProcess p=tier2.get(i);
+             if(p.currentPriority<best.currentPriority)
+                highest=p;
+
+}
+        return highest;
+    }
+    public static int runTier2(ArrayList<ACSProcess>tier2,int time){
+        if(tier2.isEmpty())
+            return time;
+        ACSProcess p=highestpriority(tier2);
+        System.out.println("Tier 2 runs P"+p.id);
+        time+=p.remaining;
+        p.remaining=0;
+        p.completed=true;
+        p.completion=time;
+        p.turnaround=p.completion-p.arrival;
+        p.waiting=p.turnaround-p.burst;
+        tier2.remove(p);
+
+        return time;
+    }
+}
