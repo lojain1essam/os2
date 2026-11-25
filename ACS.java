@@ -9,6 +9,7 @@ public class ACS {
     public int quantum;
     public int cs;
     static final int AGING_INTERVAL = 4;
+    static String lastState = "";
 
     //tier1
     public static void addProcess(ArrayList<ACSProcess> processes){
